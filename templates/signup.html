@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Inscription - Tic-Tac-Toe{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="auth-form">
+        <h2>Inscription</h2>
+        <p class="app-description">Créez un compte pour jouer au Tic-Tac-Toe</p>
+        
+        <form method="POST">
+            <div class="form-group">
+                <label for="username">Nom d'utilisateur:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Mot de passe:</label>
+                <input type="password" id="password" name="password" required minlength="6">
+                <small>Minimum 6 caractères</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirm_password">Confirmer le mot de passe:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">S'inscrire</button>
+        </form>
+        
+        <p class="auth-link">
+            Déjà un compte? <a href="{{ url_for('login') }}">Connectez-vous ici</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

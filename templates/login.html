@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Connexion - Tic-Tac-Toe{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="auth-form">
+        <h2>🔐 Connexion</h2>
+        <p class="app-description">Connectez-vous pour jouer au Tic-Tac-Toe</p>
+        
+        <form method="POST">
+            <div class="form-group">
+                <label for="username">Nom d'utilisateur:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Mot de passe:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Se connecter</button>
+        </form>
+        
+        <div class="auth-links">
+            <a href="{{ url_for('signup') }}">Créer un compte</a>
+            <a href="{{ url_for('forgot_password') }}">Mot de passe oublié ?</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Jeu - Tic-Tac-Toe{% endblock %}
+
+{% block content %}
+<div class="game-container">
+    <div class="game-header">
+        <h2>🎮 Bienvenue, {{ username }} !</h2>
+        <div class="user-info">
+            Votre score: <span class="score">{{ score }}</span> points
+        </div>
+    </div>
+    
+    <div class="game-actions">
+        <div class="action-card">
+            <h3>🎯 Lancer le jeu</h3>
+            <p>Jouez au Tic-Tac-Toe et gagnez des points!</p>
+            <a href="{{ url_for('launch_game') }}" class="btn btn-game">Jouer maintenant</a>
+        </div>
+    </div>
+
+    <div class="game-instructions">
+        <h3>Comment jouer:</h3>
+        <ol>
+            <li>Cliquez sur "Jouer maintenant"</li>
+            <li>Le jeu s'ouvre dans une nouvelle fenêtre</li>
+            <li>À la fin, entrez votre nom d'utilisateur pour sauvegarder le score</li>
+        </ol>
+    </div>
+
+    <div class="points-info">
+        <h3>🎯 Système de points:</h3>
+        <ul>
+            <li>Victoire: <strong>+10 points</strong></li>
+            <li>Match nul: <strong>+5 points</strong></li>
+        </ul>
+    </div>
+
+    <div class="logout-section">
+        <a href="{{ url_for('logout') }}" class="btn btn-secondary">🚪 Déconnexion</a>
+    </div>
+</div>
+{% endblock %}
