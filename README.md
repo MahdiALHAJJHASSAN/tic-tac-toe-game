@@ -1,28 +1,17 @@
-# 🎯 Jeu Tic-Tac-Toe - Version Complète
+# Tic-Tac-Toe - Jeu Complet
 
-Un jeu Tic-Tac-Toe développé en Python avec interface web Flask et interface desktop Tkinter.
+Application de Tic-Tac-Toe avec site web et jeu desktop.
 
-## ✨ Fonctionnalités
+## Comment installer
 
-- 🔐 **Système d'authentification** (inscription/connexion)
-- 📊 **Gestion des scores** en base de données
-- 🔄 **Réinitialisation de mot de passe** par email
-- 🎮 **Interface graphique** Tkinter
-- 🌐 **Application web** Flask
-- 💾 **Base de données** SQLite
-- 🎯 **Système de points** (victoire: +10, nul: +5)
+1. Télécharge le projet
+2. Installe les requirements : pip install -r requirements.txt
+3. Lance la base de données : python reset_complet.py
+4. Lance le site : python app.py
+5. Va sur : http://127.0.0.1:5000
 
-## 🛠 Technologies Utilisées
+## Comptes pour tester
 
-- **Backend:** Python, Flask
-- **Base de données:** SQLite
-- **Interface desktop:** Tkinter
-- **Frontend web:** HTML, CSS, Jinja2
-- **Sécurité:** Hash SHA256
-
-## 🚀 Installation
-
-1. **Cloner le repository**
-```bash
-git clone https://github.com/tonusername/tic-tac-toe-game.git
-cd tic-tac-toe-game
+- Utilisateur: alex, Mot de passe: alex123
+- Utilisateur: test, Mot de passe: test123
+- Utilisateur: admin, Mot de passe: admin123
